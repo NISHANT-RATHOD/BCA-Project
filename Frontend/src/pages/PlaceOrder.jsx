@@ -45,7 +45,7 @@ const PlaceOrder = () => {
       currency: order.currency,
       name: "Order Payment",
       description: "Order Payment",
-      order_id: order._id,
+      order_id: order.id,
       receipt: order.receipt,
       handler: async (response) => {
         console.log(response);
