@@ -66,7 +66,7 @@ const Product = () => {
                 <p>Select Size</p>
                  <div className='flex gap-2'>
                       {JSON.parse(productData.sizes[0]).map((item,index)=>(
-                        <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size?'border-orange-500':''}`} key={index}>{item}</button>
+                        <button onClick={()=>setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size?'border-black-500':''}`} key={index}>{item}</button>
                       ))}   
                  </div>
               </div>
