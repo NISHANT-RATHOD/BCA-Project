@@ -100,7 +100,7 @@ const Collection = () => {
                   Women
                  </p>
                  <p className='flex gap-2'>
-                  <input className='w- cursor-pointer' type="checkbox" onChange={toggleCategory} value={'Kids'} />
+                  <input className='w- cursor-pointer' type="checkbox" onChange={toggleCategory} value={'kids'} />
                   kids
                  </p>
            </div>

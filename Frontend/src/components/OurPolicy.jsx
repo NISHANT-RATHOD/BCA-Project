@@ -52,9 +52,9 @@ const OurPolicy = () => {
         </div>
       </div>
 
-      <p className='text-gray-500 text-center mt-2 pb-20 font-medium px-28'>
+      {/* <p className='text-gray-500 text-center mt-2 pb-20 font-medium px-28'>
       At  FashionForever , we are committed to delivering an exceptional shopping experience. Our customer-first approach is reflected in our easy exchange policy, 7-day free returns, and 24/7 customer support. We aim to provide you with peace of mind and confidence in every purchase, ensuring that you're fully supported throughout your journey with us. Your satisfaction is our top priority, and we strive to make your experience as seamless and rewarding as possible. Shop with confidence, knowing that we’re always here to assist you.
-      </p>
+      </p> */}
     </div>
   )
 }
