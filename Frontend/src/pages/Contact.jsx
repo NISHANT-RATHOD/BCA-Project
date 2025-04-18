@@ -18,7 +18,9 @@ const Contact = () => {
           <p className='text-gray-500'>Tel: (475) 758-456 <br/> Email: admin@ForeverFashion.com</p>
           <p className='font-semibold text-xl text-gray-600'>Careers ar ForeverFashion</p>
           <p className='text-gray-500'>Learn more about out teams and job openings.</p>
-          <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-200'>Explore Jobs</button>
+          <button className="rounded-md border-2  border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none">
+            Explore Jobs
+          </button>
          </div>
       </div>
       <NewsLetterBox/>

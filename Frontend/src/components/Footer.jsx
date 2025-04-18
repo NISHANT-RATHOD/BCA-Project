@@ -27,19 +27,19 @@ const Footer = () => {
             </ul>
             <ul>
             <div class="flex justify-center space-x-8 py-20 pl-2 ">
-    <a href="#" class="text-2xl  ease-in-out transition-transform duration-200 hover:scale-125 hover:text-blue-500">
+    <a  class="text-2xl  ease-in-out transition-transform duration-200 hover:scale-125 hover:text-blue-500">
       <i class="fab fa-facebook-f"></i>
     </a>
-    <a href="#" class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-blue-400">
+    <a  class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-blue-400">
       <i class="fab fa-twitter"></i>
     </a>
-    <a href="#" class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-pink-400">
+    <a  class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-pink-400">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="#" class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-red-500">
+    <a  class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-red-500">
       <i class="fab fa-youtube"></i>
     </a>
-    <a href="#" class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-gray-400">
+    <a  class="text-2xl   transition-transform duration-200 hover:scale-125 ease-in-out hover:text-gray-400">
       <i class="fab fa-linkedin-in"></i>
     </a>
   </div>

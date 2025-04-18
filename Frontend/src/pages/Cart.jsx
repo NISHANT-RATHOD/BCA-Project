@@ -4,6 +4,7 @@ import Title from "../components/Title";
 import { assets } from "../assets/assets";
 import CartTotal from "../components/CartTotal";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const { products, currency, cartItems, updateQuantity } =
@@ -118,7 +119,7 @@ const Cart = () => {
               </a>
             </button> */}
             <button
-              onClick={() => { navigate("/place-order");}}
+              onClick={() => {cartData.length === 0 ? toast.error('Add A Product To The Cart.') : navigate("/place-order")}}
               className="rounded-md border-2 mt-7 border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none"
             >
               PROCEED TO CHECKOUT

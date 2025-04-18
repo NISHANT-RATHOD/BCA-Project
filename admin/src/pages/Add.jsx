@@ -17,6 +17,7 @@ const Add = ({ token }) => {
   const [subCategory, setSubCategory] = useState("Topwear");
   const [bestseller, setBestseller] = useState(false);
   const [sizes, setSizes] = useState([]);
+  const [check, setCheck] = useState(false);
 
   const onSubmitHander = async (e) => {
     e.preventDefault();
@@ -51,6 +52,7 @@ const Add = ({ token }) => {
         setImage3(false);
         setImage4(false);
         setPrice("");
+        setCheck(false);
       } else {
         toast.error(response.data.message);
         console.log(response.data);
@@ -193,6 +195,7 @@ const Add = ({ token }) => {
             className="w-full px-3 py-2 sm:w-[120px]"
             type="Number"
             placeholder="55"
+            required
           />
         </div>
       </div>
@@ -317,8 +320,16 @@ const Add = ({ token }) => {
         </a>
       </button> */}
       <button
-       type="submit" 
-        className="rounded-md border-2 mt-3 border-black bg-white px-6 py-2 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none"
+        type="submit"
+        onClick={() => {
+          setTimeout(() => {
+           setCheck(name == "" ||description == "" || price == "" ?false:true) 
+          }, 1000);
+        }}
+        disabled={check}
+        className={`rounded-md border-2 mt-3 border-black ${
+          check ? "bg-black text-white" : "bg-white"
+        } px-6 py-2 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none`}
       >
         ADD ITEM
       </button>
