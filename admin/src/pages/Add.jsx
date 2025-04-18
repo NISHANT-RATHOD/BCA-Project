@@ -42,17 +42,18 @@ const Add = ({ token }) => {
         formData,
         { headers: { token } }
       );
-      if(response.data.success){
-          toast.success(response.data.message);
-          setName('');
-          setDescription('');
-          setImage1(false);
-          setImage2(false);
-          setImage3(false);
-          setImage4(false);
-          setPrice('')      
-      }else{
+      if (response.data.success) {
+        toast.success(response.data.message);
+        setName("");
+        setDescription("");
+        setImage1(false);
+        setImage2(false);
+        setImage3(false);
+        setImage4(false);
+        setPrice("");
+      } else {
         toast.error(response.data.message);
+        console.log(response.data);
       }
     } catch (error) {
       console.log(error);
@@ -210,7 +211,7 @@ const Add = ({ token }) => {
           >
             <p
               className={`${
-                sizes.includes("S") ? "bg-pink-100" : "bg-slate-200"
+                sizes.includes("S") ? "bg-black text-white" : "bg-slate-200"
               } px-3 py-2 cursor-pointer`}
             >
               S
@@ -227,7 +228,7 @@ const Add = ({ token }) => {
           >
             <p
               className={`${
-                sizes.includes("M") ? "bg-pink-100" : "bg-slate-200"
+                sizes.includes("M") ? "bg-black text-white" : "bg-slate-200"
               } px-3 py-2 cursor-pointer`}
             >
               M
@@ -244,7 +245,7 @@ const Add = ({ token }) => {
           >
             <p
               className={`${
-                sizes.includes("L") ? "bg-pink-100" : "bg-slate-200"
+                sizes.includes("L") ? "bg-black text-white" : "bg-slate-200"
               } px-3 py-2 cursor-pointer`}
             >
               L
@@ -261,7 +262,7 @@ const Add = ({ token }) => {
           >
             <p
               className={`${
-                sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200"
+                sizes.includes("XL") ? "bg-black text-white" : "bg-slate-200"
               } px-3 py-2 cursor-pointer`}
             >
               XL
@@ -278,7 +279,7 @@ const Add = ({ token }) => {
           >
             <p
               className={`${
-                sizes.includes("XXL") ? "bg-pink-100" : "bg-slate-200"
+                sizes.includes("XXL") ? "bg-black text-white" : "bg-slate-200"
               } px-3 py-2 cursor-pointer`}
             >
               XXL
@@ -302,9 +303,18 @@ const Add = ({ token }) => {
         </label>
       </div>
 
-      <button type="submit" className=" w-28 py-3 mt-4 bg-black text-white">
-        {" "}
-        ADD
+      <button type="submit" className="mt-3">
+        <a href="#_" class="relative inline-block text-lg group">
+          <span class="relative z-10 block px-8 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+            <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+            <span class="relative">Add</span>
+          </span>
+          <span
+            class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+            data-rounded="rounded-lg"
+          ></span>
+        </a>
       </button>
     </form>
   );
