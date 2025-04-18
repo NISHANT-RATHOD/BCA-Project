@@ -53,6 +53,7 @@ const Add = ({ token }) => {
         setImage4(false);
         setPrice("");
         setCheck(false);
+        console.log(category, subCategory);
       } else {
         toast.error(response.data.message);
         console.log(response.data);
@@ -161,6 +162,7 @@ const Add = ({ token }) => {
             onChange={(e) => {
               setCategory(e.target.value);
             }}
+            value={category}
             className="w-full px-3 py-2"
           >
             <option value="Men">Men</option>
@@ -170,15 +172,14 @@ const Add = ({ token }) => {
         </div>
 
         <div>
-          <p
+          <p className="mb-2">Product SubCategory</p>
+          <select
             onChange={(e) => {
               setSubCategory(e.target.value);
             }}
-            className="mb-2"
+            value={subCategory}
+            className="w-full px-3 py-2"
           >
-            Product SubCategory
-          </p>
-          <select className="w-full px-3 py-2">
             <option value="Topwear">Topwear</option>
             <option value="Bottomwear">Bottomwear</option>
             <option value="Winterwear">Winterwear</option>
@@ -323,7 +324,9 @@ const Add = ({ token }) => {
         type="submit"
         onClick={() => {
           setTimeout(() => {
-           setCheck(name == "" ||description == "" || price == "" ?false:true) 
+            setCheck(
+              name == "" || description == "" || price == "" ? false : true
+            );
           }, 1000);
         }}
         disabled={check}
