@@ -10,7 +10,7 @@ const RelatedProducts = (category,subCategory) => {
 
 
     useEffect(()=>{
-        
+      window.scrollTo(0, 0);
         if(products.length > 0){
              let productsCopy = products.slice();
 
@@ -20,7 +20,7 @@ const RelatedProducts = (category,subCategory) => {
              setRelated(productsCopy.slice(0,5));
             }
 
-    },[products])
+    },[products],[location.pathname])
 
   return (
     <div className='my-24'>
