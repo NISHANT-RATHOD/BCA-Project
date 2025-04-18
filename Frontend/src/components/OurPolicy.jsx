@@ -31,7 +31,7 @@ import { assets } from '../assets/assets'
 
 const OurPolicy = () => {
   return (
-    <div>
+    <div id='ourpolicy'>
       <div className='flex flex-col sm:flex-row justify-around gap-12 sm:gap-2 text-center py-20 text-xs sm:text-sm md:text-base text-gray-700 '>
         <div class="transition-transform duration-200 hover:scale-125  hover:text-pink-400">
             <img src={assets.exchange_icon} className='w-12 m-auto mb-5 ' alt="" />

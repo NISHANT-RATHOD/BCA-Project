@@ -121,8 +121,14 @@ const Product = () => {
             <div className="flex gap-2">
               {JSON.parse(productData.sizes[0]).map((item, index) => (
                 <button
-                  onClick={() => {setSize(item)}}
-                  className={item === size ?'border py-2 px-4 bg-black text-white' :'border py-2 px-4 bg-gray-100 hover:bg-black hover:text-white'}
+                  onClick={() => {
+                    setSize(item);
+                  }}
+                  className={
+                    item === size
+                      ? "border py-2 px-4 bg-black text-white"
+                      : "border py-2 px-4 bg-gray-100 hover:bg-black hover:text-white"
+                  }
                   key={index}
                 >
                   {item}
@@ -130,7 +136,7 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button
+          {/* <button
             onClick={() => addToCart(productData._id, size)}>
             <a href="#_" class="relative inline-block text-sm group">
               <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
@@ -143,6 +149,9 @@ const Product = () => {
                 data-rounded="rounded-lg"
               ></span>
             </a>
+          </button> */}
+          <button onClick={() => addToCart(productData._id, size)} className="rounded-md border-2  border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none">
+            ADD TO CART
           </button>
           <hr className="mt-8 sm:w-4/5" />
           <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1">
@@ -183,10 +192,9 @@ const Product = () => {
         subCategory={productData.subCategory}
       />
     </div>
-  
-  
-  
-  ) : <div className='opacity-0' ></div>
-}
+  ) : (
+    <div className="opacity-0"></div>
+  );
+};
 
-export default Product
+export default Product;

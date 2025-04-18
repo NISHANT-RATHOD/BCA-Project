@@ -303,7 +303,7 @@ const Add = ({ token }) => {
         </label>
       </div>
 
-      <button type="submit" className="mt-3">
+      {/* <button type="submit" className="mt-3">
         <a href="#_" class="relative inline-block text-lg group">
           <span class="relative z-10 block px-8 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
             <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
@@ -315,6 +315,12 @@ const Add = ({ token }) => {
             data-rounded="rounded-lg"
           ></span>
         </a>
+      </button> */}
+      <button
+       type="submit" 
+        className="rounded-md border-2 mt-3 border-black bg-white px-6 py-2 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none"
+      >
+        ADD ITEM
       </button>
     </form>
   );

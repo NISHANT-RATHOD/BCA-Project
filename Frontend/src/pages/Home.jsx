@@ -12,7 +12,7 @@ const Home = () => {
       <Hero/>
       <LatestCollection/>
       <BestSeller/>
-      <OurPolicy/>
+      <OurPolicy id='ourpolicy'/>
       <NewsLetterBox/>
     </div>
   )
