@@ -56,7 +56,7 @@ const Login = ({ setToken }) => {
               }}
               value={password}
               className="rounded-md w-full px-3 py-2 border border-gray-300 outline-none"
-              type="password"
+              type={type}
               placeholder="Enter your password"
               required
             />
