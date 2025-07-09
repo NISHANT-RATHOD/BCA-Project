@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { backendUrl } from "../App";
 import { toast } from "react-toastify";
+import { assets } from "../assets/assets";
 
 
 const Login = ({ setToken }) => {
@@ -59,6 +60,7 @@ const Login = ({ setToken }) => {
               placeholder="Enter your password"
               required
             />
+             <img onClick={(e)=>{console.log(e.target.src)}} className="w-5 h-5 z-50 cursor-pointer relative bottom-8 left-64" src={assets.show_icon} alt="" /> 
           </div>
           {/* <button type='submit' className='mt-2 w-full py-2 px-4 rounded-md text-white bg-black'>Login</button> */}
           <button
