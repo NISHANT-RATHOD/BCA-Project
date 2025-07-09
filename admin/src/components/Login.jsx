@@ -60,7 +60,7 @@ const Login = ({ setToken }) => {
               placeholder="Enter your password"
               required
             />
-             <img onClick={(e)=>{e.target.src.split('/').pop() === "eye.png"?e.target.src=assets.hide_icon:e.target.src=assets.show_icon;type=='password'?setType('text'):setType('password')}} className="w-5 h-5 z-50 cursor-pointer relative bottom-8 left-64" src={assets.show_icon} alt="" /> 
+             <img onClick={(e)=>{alert(e.target.src.split('/').pop()) /> 
           </div>
           {/* <button type='submit' className='mt-2 w-full py-2 px-4 rounded-md text-white bg-black'>Login</button> */}
           <button
