@@ -53,6 +53,7 @@ const Navbar = () => {
 </ul>
 
         <div className='flex items-center gap-6'>
+          <a href='https://fashionforever-admin.vercel.app/' target='blank' rel="noopener noreferrer" className=" hidden sm:block rounded-md border-2  border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 shadow-[4px_4px_0px_black] hover:translate-x-[-0.5px] hover:translate-y-[-0.5px] hover:rounded-md  active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none">ADMIN</a>
           <Link to={'/collection'}>
           <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
           </Link>
@@ -89,6 +90,7 @@ const Navbar = () => {
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>Collection</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/about'>About</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/contact'>Contact</NavLink>
+                    <a href='https://fashionforever-admin.vercel.app/' target='blank' rel="noopener noreferrer" className=" block sm:hidden rounded-md border-2  border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 shadow-[4px_4px_0px_black] hover:translate-x-[-0.5px] hover:translate-y-[-0.5px] hover:rounded-md  active:translate-x-[0px] active:translate-y-[0px] active:rounded-md active:shadow-none">ADMIN</a>
 
                    </div>
 
