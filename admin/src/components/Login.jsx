@@ -8,7 +8,6 @@ import { assets } from "../assets/assets";
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const src = "https://fashionforever-admin-lz8wkx1cz-nishants-projects-4fa4ce7d.vercel.app/assets/eye-C-7VnmhL.png"
 
   const onSubmitHandler = async (e) => {
     try {
