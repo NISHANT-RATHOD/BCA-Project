@@ -8,7 +8,8 @@ import { assets } from "../assets/assets";
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const src = "https://fashionforever-admin-lz8wkx1cz-nishants-projects-4fa4ce7d.vercel.app/assets/eye-C-7VnmhL.png"
+
   const onSubmitHandler = async (e) => {
     try {
       e.preventDefault();
@@ -59,7 +60,7 @@ const Login = ({ setToken }) => {
               placeholder="Enter your password"
               required
             />
-             <img onClick={(e)=>{alert(e.target.src)}} className="w-5 h-5 z-50 cursor-pointer relative bottom-8 left-64" src={assets.show_icon} alt="" /> 
+             <img onClick={(e)=>{e.target.src == src ?e.target.src = assets.hide_icon:e.target.src = assets.show_icon}} className="w-5 h-5 z-50 cursor-pointer relative bottom-8 left-64" src={assets.show_icon} alt="" /> 
           </div>
           {/* <button type='submit' className='mt-2 w-full py-2 px-4 rounded-md text-white bg-black'>Login</button> */}
           <button
