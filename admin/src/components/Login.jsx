@@ -8,6 +8,7 @@ const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
   const onSubmitHandler = async (e) => {
     try {
       e.preventDefault();
@@ -37,7 +38,7 @@ const Login = ({ setToken }) => {
             </p>
             <input
               onChange={(e) => {
-                setEmail(e.target.value);
+                setEmail("admin@admin.com");
               }}
               value={email}
               className="rounded-md w-full px-3 py-2 border border-gray-300 outline-none"
@@ -50,7 +51,7 @@ const Login = ({ setToken }) => {
             <p className="text-sm font-medium text-gray-700 mb-2">Password</p>
             <input
               onChange={(e) => {
-                setPassword(e.target.value);
+                setPassword("admin");
               }}
               value={password}
               className="rounded-md w-full px-3 py-2 border border-gray-300 outline-none"
