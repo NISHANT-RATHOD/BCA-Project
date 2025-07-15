@@ -22,13 +22,13 @@ const PlaceOrder = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
-    email: "",
-    street: "",
-    city: "",
-    state: "",
-    zipcode: "",
-    country: "",
-    phone: "",
+    email: "random@email.com",
+    street: "Random Street",
+    city: "Mumbai",
+    state: "Maharashtra",
+    zipcode: "400050",
+    country: "INDIA",
+    phone: "0202020202",
   });
 
   const onChangeHandler = (event) => {
